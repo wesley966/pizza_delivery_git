@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Express</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #111111;
+            color: #ffffff;
+        }
+
+        header {
+            background-color: #b30000;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 38px;
+        }
+
+        header p {
+            margin-top: 8px;
+            font-size: 18px;
+        }
+
+        nav {
+            background-color: #202020;
+            padding: 14px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffc400;
+        }
+
+        .banner {
+            min-height: 420px;
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.60),
+                    rgba(0, 0, 0, 0.70)
+                ),
+                url("https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1600&q=80");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .banner h2 {
+            font-size: 46px;
+            margin-bottom: 15px;
+        }
+
+        .banner p {
+            font-size: 21px;
+            margin-bottom: 25px;
+        }
+
+        .botao {
+            display: inline-block;
+            border: none;
+            background-color: #ffc400;
+            color: #111111;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .botao:hover {
+            background-color: #ffffff;
+        }
+
+        .cardapio {
+            padding: 50px 8%;
+        }
+
+        .cardapio h2 {
+            text-align: center;
+            font-size: 34px;
+            margin-bottom: 30px;
+            color: #ffc400;
+        }
+
+        .pizzas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .pizza {
+            background-color: #202020;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+        }
+
+        .pizza img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+
+        .pizza div {
+            padding: 20px;
+        }
+
+        .pizza h3 {
+            color: #ffc400;
+            margin-bottom: 10px;
+        }
+
+        .pizza p {
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .preco {
+            font-size: 23px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .pizza button {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .sobre {
+            background-color: #b30000;
+            padding: 45px 8%;
+            text-align: center;
+        }
+
+        .sobre h2 {
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: #080808;
+            padding: 25px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .banner h2 {
+                font-size: 34px;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🍕 Pizza Express</h1>
+    <p>Pizza quente, pedido rápido e entrega na sua porta.</p>
+</header>
+
+<nav>
+    <a href="#inicio">Início</a>
+    <a href="#cardapio">Cardápio</a>
+    <a href="#sobre">Sobre</a>
+</nav>
+
+<section class="banner" id="inicio">
+    <div>
+        <h2>A pizza perfeita para hoje</h2>
+        <p>Escolha seu sabor favorito e faça seu pedido.</p>
+
+        <a class="botao" href="#cardapio">
+            Ver Cardápio
+        </a>
+
+        <button
+    class="botao"
+    onclick="alert('Seu pedido está sendo preparado!')"
+>
+    Acompanhar Pedido
+        </button>
+
+    </div>
+</section>
+
+<section class="cardapio" id="cardapio">
+
+    <h2>Nosso Cardápio</h2>
+
+    <div class="pizzas">
+
+        <article class="pizza">
+            <img
+                src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80"
+                alt="Pizza de queijo"
+            >
+
+            <div>
+                <h3>Pizza Clássica</h3>
+
+                <p>
+                    Molho de tomate, queijo, tomate e temperos especiais.
+                </p>
+
+                <span class="preco">R$ 49,90</span>
+
+                <button
+                    class="botao"
+                    onclick="alert('Pizza adicionada ao pedido!')"
+                >
+                    Adicionar
+                </button>
+            </div>
+        </article>
+
+        <article class="pizza">
+            <img
+                src="https://images.unsplash.com/photo-1594007654729-407eedc4be65?auto=format&fit=crop&w=800&q=80"
+                alt="Pizza especial"
+            >
+
+            <div>
+                <h3>Pizza Especial</h3>
+
+                <p>
+                    Queijo, calabresa, cebola e combinação especial da casa.
+                </p>
+
+                <span class="preco">R$ 59,90</span>
+
+                <button
+                    class="botao"
+                    onclick="alert('Pizza adicionada ao pedido!')"
+                >
+                    Adicionar
+                </button>
+            </div>
+        </article>
+
+        <article class="pizza">
+            <img
+                src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=800&q=80"
+                alt="Pizza premium"
+            >
+
+            <div>
+                <h3>Pizza Premium</h3>
+
+                <p>
+                    Ingredientes selecionados, muito queijo e sabor especial.
+                </p>
+
+                <span class="preco">R$ 69,90</span>
+
+                <button
+                    class="botao"
+                    onclick="alert('Pizza adicionada ao pedido!')"
+                >
+                    Adicionar
+                </button>
+            </div>
+        </article>
+
+    </div>
+
+</section>
+
+<section class="sobre" id="sobre">
+
+    <h2>Sobre a Pizza Express</h2>
+
+    <p>
+        Projeto criado para a atividade final de Git e GitHub.
+    </p>
+
+</section>
+
+<footer>
+    <p>Pizza Express | Projeto acadêmico de Git e GitHub</p>
+</footer>
+
+</body>
+</html>
